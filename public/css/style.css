@@ -1,0 +1,350 @@
+/* theme */
+:root {
+  --font-family: "Open Sans", sans-serif;
+  --font-family-logo: "Mr Bedfort", cursive;
+  --dark: #0b0c10;
+  --dark-light: #1f2833;
+  --primary: #66fcf1;
+  --primary-light: #45a29e;
+  --danger: #9d0051;
+  --gold: #bc9a17;
+  --grey: #c5c6c7;
+  --text-color: #0b0c10;
+  --box-shadow: 0px 5px 20px 0.5px var(--primary-light);
+  --border-primary: 1px solid var(--primary);
+  --border-primary-light: 1px solid var(--primary-light);
+  --border-dark: 1px solid var(--dark);
+  --border-dark-light: 1px solid var(--dark-light);
+  --border-danger: 1px solid var(--danger);
+  --border-grey: 1px solid var(--grey);
+  --border-radius: 4px;
+}
+
+/* reset */
+* {
+  box-sizing: border-box;
+  font-family: var(--font-family);
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 62.5%;
+  font-family: var(--font-family);
+}
+
+h1,
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  padding: 0;
+  color: var(--text-color);
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+/* app container */
+
+.app-container {
+  background-color: var(--primary);
+  font-size: 1.6rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: var(--text-color);
+}
+
+/* page container */
+
+.page-container {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  min-width: 60rem;
+  background-color: white;
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 2rem 4rem;
+  border-radius: var(--border-radius);
+}
+
+.card h2 {
+  text-align: left;
+  border-bottom: 2px solid var(--grey);
+}
+
+.form-control {
+  border-bottom: 1px solid var(--grey);
+  line-height: 3.5rem;
+  padding: 5px 0;
+}
+
+.form-control input,
+select,
+textarea,
+content {
+  width: 100%;
+  outline: none;
+  border: none;
+}
+
+.form-control input::placeholder,
+select::placeholder,
+textarea::placeholder,
+content::placeholder {
+  font-size: 1.4rem;
+  color: var(--dark-light);
+}
+
+.form-control input:focus::placeholder,
+select:focus::placeholder,
+textarea:focus::placeholder,
+content:focus::placeholder {
+  color: transparent;
+}
+
+.category {
+  background-color: white;
+  font-size: 14px;
+  line-height: 3.5rem;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+}
+
+.category label {
+  text-align: left;
+  border-right: 1px dashed var(--grey);
+  padding-right: 5px;
+  position: relative;
+}
+
+.category select {
+  font-size: 14px;
+  height: 3.5rem;
+}
+
+.category option {
+}
+
+.form-control textarea {
+  min-height: 15rem;
+  width: 100%;
+}
+
+.form-action {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 2rem;
+}
+
+/* header */
+
+header {
+  background-color: var(--dark);
+  color: var(--grey);
+  padding: 1.6rem 10rem;
+  box-shadow: var(--box-shadow);
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+@media only screen and (max-width: 800px) {
+  header {
+    padding: 1.6rem 2.6rem;
+  }
+}
+
+.headerMenu {
+  padding: 0;
+  color: var(--gold);
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+@media only screen and (max-width: 800px) {
+  .headerMenu {
+    display: none;
+  }
+}
+
+.headerMenu li {
+  padding: 0.5rem 2rem;
+  border-radius: var(--border-radius);
+}
+
+.headerMenuActive {
+  background-color: var(--dark-light);
+}
+
+.headerMenu li a {
+  color: var(--gold);
+}
+
+.headerMenu li:hover {
+  background-color: var(--dark-light);
+}
+
+.logo {
+  flex: 1;
+  font-weight: 700;
+  font-size: 3rem;
+  letter-spacing: 0.1rem;
+  color: var(--gold);
+  font-family: var(--font-family-logo);
+}
+
+li.header-profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  background-color: var(--dark-light);
+  border-radius: 50%;
+  font-weight: 700;
+  cursor: pointer;
+  margin-left: 2rem;
+  border: 2px solid var(--dark);
+}
+
+li.header-profile:hover {
+  background-color: var(--dark);
+  border: 2px solid var(--gold);
+}
+
+/* headerMenuXS */
+
+@media only screen and (min-width: 801px) {
+  .headerMenuXS {
+    display: none;
+  }
+}
+
+.headerMenuXS {
+  color: var(--gold);
+  font-size: 2.5rem;
+}
+
+.headerMenuXSIcon {
+  cursor: pointer;
+}
+
+.headerMenuXSList {
+  display: none;
+  position: absolute;
+  top: 80px;
+  left: 0;
+  text-align: center;
+  width: 100%;
+  background-color: var(--dark-light);
+}
+
+.show {
+  display: block;
+}
+
+.headerMenuXSList li {
+  padding: 0.5rem;
+}
+.headerMenuXSList li a {
+  padding: 1rem;
+  color: var(--gold);
+  font-size: 2rem;
+}
+
+.headerMenuXSList li a:active {
+  padding: 1rem;
+  color: var(--gold);
+  font-size: 2rem;
+}
+
+/* footer */
+footer {
+  background-color: var(--dark);
+  color: var(--gold);
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.6rem;
+}
+
+/* button */
+
+.btn {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  font-size: 1.6rem;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  border: var(--border-primary);
+  border-radius: var(--border-radius);
+}
+
+.btn-dark-light {
+  background-color: var(--dark-light);
+  color: var(--gold);
+  border: var(--border-dark-light);
+  border-radius: var(--border-radius);
+}
+
+.btn-danger {
+  color: var(--grey);
+  background-color: var(--danger);
+  border: var(--border-danger);
+  border-radius: var(--border-radius);
+}
+
+.btn-small {
+  padding: 0.2rem 0.6rem;
+}
+
+/* utils */
+
+.mr-10 {
+  margin-right: 10px;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.small {
+  font-size: 1.2rem;
+}
+
+.text-danger {
+  color: var(--danger);
+}
+
+/* errors */
+
+.text-error {
+  font-size: 1.2rem;
+  color: var(--danger);
+  font-weight: 700;
+  margin-top: 0.5rem;
+}

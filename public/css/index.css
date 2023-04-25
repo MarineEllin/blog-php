@@ -1,0 +1,231 @@
+.articlesAndCategoriesMenuContainer {
+  display: flex;
+  flex: 1;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+@media only screen and (max-width: 800px) {
+  .menuCategories {
+    display: none;
+  }
+}
+
+.menuCategories {
+  background-color: var(--dark-light);
+  color: var(--gold);
+  line-height: 3.5rem;
+  margin: 10.3rem 2rem;
+  padding: 3rem 2rem;
+  border-radius: var(--border-radius);
+  height: fit-content;
+  justify-content: flex-end;
+}
+
+.cat-active {
+  font-weight: 700;
+}
+
+.menuCategories li {
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.menuCategories li a {
+  color: var(--gold);
+}
+
+.menuCategories li:hover {
+  opacity: 0.8;
+}
+
+.articles-container {
+  display: flex;
+  flex-flow: row wrap;
+  width: 120rem;
+  margin: 2rem 0;
+}
+
+.content-articles {
+  max-width: 120rem;
+  width: 100%;
+  display: flex;
+  flex: 1;
+  flex-flow: row wrap;
+  align-self: center;
+  margin: 2rem 0;
+}
+
+.article {
+  flex: 30%;
+  min-width: 30rem;
+  margin: 1rem;
+  background-color: white;
+  border-bottom-left-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  cursor: pointer;
+}
+
+.article:hover .img-container {
+  transform: scale(1.1);
+}
+
+.categories-container h2 {
+  padding-left: 1rem;
+  color: var(--dark-light);
+}
+
+.article h3 {
+  height: 8rem;
+  font-size: 1.8rem;
+  padding: 1rem 1.5rem;
+}
+
+.overflow-hidden {
+  height: 20rem;
+  overflow: hidden;
+}
+
+.img-container {
+  height: 20rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: transform 0.6s;
+}
+
+/* author */
+
+.author-container {
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin: 0 10px 10px 0;
+}
+
+.article-author {
+  display: flex;
+  flex-flow: row;
+  align-items: flex-end;
+  justify-content: flex-end;
+  margin: 0 20px 20px 0;
+}
+
+.article-author p {
+  color: var(--grey);
+  font-size: 1.2rem;
+  font-style: italic;
+  display: flex;
+}
+
+/* profile */
+
+.profile-container {
+  position: relative;
+  display: flex;
+  flex: 1;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-sub-container {
+  background-color: white;
+  width: 600px;
+  border-radius: var(--border-radius);
+  margin: 20px 0;
+  padding: 0 20px 20px 20px;
+}
+
+.profile-sub-container-title {
+  display: flex;
+  border-bottom: 2px solid var(--grey);
+  margin-bottom: 2rem;
+  align-items: center;
+}
+.profile-sub-container-title h2 {
+  flex: 1;
+}
+
+.profile-sub-container ul {
+  margin-bottom: 2rem;
+}
+
+.profile-sub-container li {
+  display: flex;
+  align-items: center;
+  flex-flow: row;
+  line-height: 3.5rem;
+  border-bottom: 1px solid var(--grey);
+}
+
+.profile-sub-container li p {
+  display: flex;
+  flex: 0.85;
+}
+
+.profile-sub-container li div {
+  display: flex;
+  flex: 0.15;
+  justify-content: space-between;
+}
+
+.profile-sub-container li i {
+  cursor: pointer;
+}
+.profile-sub-container li i:hover {
+  color: var(--gold);
+}
+
+.action-account {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-end;
+}
+
+/* Delete account confirmation message */
+
+.confirmationMessageContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--dark-light);
+  display: flex;
+  flex-flow: column;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.confirmationMessage {
+  display: flex;
+  flex-flow: column;
+}
+
+.confirmationMessage p {
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.confirmationMessageAction {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-evenly;
+}
+
+/* error */
+
+.error-container {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  color: var(--gold);
+  font-size: 5rem;
+  font-weight: 700;
+}
